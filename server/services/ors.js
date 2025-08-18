@@ -4,7 +4,9 @@ const ORS_BASE_URL = 'https://api.openrouteservice.org';
 const API_KEY = process.env.ORS_API_KEY;
 
 if (!API_KEY) {
-  console.error('ORS_API_KEY is not set in environment variables');
+  console.error('🚨 ORS_API_KEY環境変数が設定されていません。');
+  console.error('   OpenRouteServiceのAPIキーをSecrets toolで設定してください。');
+  console.error('   設定方法: https://openrouteservice.org/dev/#/signup');
 }
 
 class ORSService {
