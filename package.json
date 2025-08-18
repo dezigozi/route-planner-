@@ -1,15 +1,27 @@
 {
-  "name": "nodejs",
+  "name": "route-optimizer",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Excel住所リストから最適訪問順を計算するアプリ（車・電車対応）",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server.js",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "npm run build && node server.js",
+    "install:client": "cd client && npm install"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@types/node": "^22.13.11"
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "axios": "^1.5.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }
