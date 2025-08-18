@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { MapManager } from './map.js';
 import { parseExcelFile, validateExcelData } from './excel.js';
 import { TSPSolver, osrmDistanceMatrix } from './tsp.js';
-import { TransitButtons } from './transit.js';
+import { TransitButtons } from './transit.jsx';
 import { exportToPDF } from './pdf.js';
 import { cleanAddress, formatDistance, formatTime, showError, showSuccess, showInfo } from './utils.js';
 
