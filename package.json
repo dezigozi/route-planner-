@@ -2,13 +2,11 @@
   "name": "route-optimizer",
   "version": "1.0.0",
   "description": "Excel住所リストから最適訪問順を計算するアプリ（車・電車対応）",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "node server.js",
-    "client": "cd client && npm run dev",
+    "start": "npm run build && node index.js",
+    "dev": "node server.js",
     "build": "cd client && npm run build",
-    "start": "npm run build && node server.js",
     "install:client": "cd client && npm install"
   },
   "dependencies": {
