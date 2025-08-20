@@ -7,7 +7,7 @@ entrypoint = "index.js"
 channel = "stable-24_11"
 
 [deployment]
-run = ["npm", "start"]
+run = ["sh", "-c", "npm start"]
 deploymentTarget = "autoscale"
 
 [[ports]]

@@ -15,5 +15,16 @@ process.env.PORT = PORT;
 
 console.log(`📡 サーバーはポート ${PORT} で起動します`);
 
-// サーバーを起動
-require('./server.js');
+// サーバーを起動（Replit用の継続実行のため）
+const server = require('./server.js');
+
+// Keep alive for Replit
+process.on('SIGTERM', () => {
+  console.log('🛑 Received SIGTERM, shutting down gracefully');
+  process.exit(0);
+});
+
+process.on('SIGINT', () => {
+  console.log('🛑 Received SIGINT, shutting down gracefully');
+  process.exit(0);
+});

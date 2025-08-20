@@ -317,6 +317,7 @@ function App() {
             <label>Excelファイル</label>
             <input
               ref={fileInputRef}
+              id="file-upload"
               type="file"
               className="file-input"
               accept=".xlsx,.xls"

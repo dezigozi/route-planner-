@@ -131,3 +131,9 @@ dist
 
 # Replit debugger
 .breakpoints
+
+# Vercel
+.vercel
+
+# Build outputs
+client/dist/
